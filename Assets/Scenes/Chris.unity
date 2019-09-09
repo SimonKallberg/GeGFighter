@@ -567,7 +567,7 @@ MonoBehaviour:
   m_AirControl: 0
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 289
   animator: {fileID: 1994836687}
 --- !u!95 &1994836687
 Animator:
@@ -927,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 5946763226748687462, guid: b9818b2c66d4f894c8da4ae537636b43,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.87
+      value: -1.838
       objectReference: {fileID: 0}
     - target: {fileID: 5946763226748687462, guid: b9818b2c66d4f894c8da4ae537636b43,
         type: 3}
@@ -977,12 +977,12 @@ PrefabInstance:
     - target: {fileID: 5946763226748687462, guid: b9818b2c66d4f894c8da4ae537636b43,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5946763226748687462, guid: b9818b2c66d4f894c8da4ae537636b43,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4605902849513057200, guid: b9818b2c66d4f894c8da4ae537636b43,
         type: 3}
