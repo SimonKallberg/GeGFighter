@@ -11,6 +11,8 @@ namespace UnityStandardAssets._2D
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
+        [SerializeField] private Collider2D m_CrouchDisableCollider;
+
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
         private bool m_Grounded;            // Whether or not the player is grounded.
@@ -54,10 +56,24 @@ namespace UnityStandardAssets._2D
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
+                // Disable one of the colliders when crouching
+                if (m_CrouchDisableCollider != null)
+                { 
+                    m_CrouchDisableCollider.enabled = true;
+                }
+
+
                 // If the character has a ceiling preventing them from standing up, keep them crouching
                 if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
                 {
                     crouch = true;
+                }
+            }
+            if (crouch)
+            {
+                if (m_CrouchDisableCollider != null)
+                {
+                    m_CrouchDisableCollider.enabled = false;
                 }
             }
 
