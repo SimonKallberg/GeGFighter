@@ -35,7 +35,7 @@ public class EndlessMap : MonoBehaviour
         }
         if (transform.position.y > botC + buffer)
         {
-            transform.position = new Vector3(transform.position.y, topC - buffer, transform.position.z);
+            transform.position = new Vector3(transform.position.x, topC - buffer, transform.position.z);
         }
     }
 }
